@@ -27,7 +27,7 @@ jobs:
       - name: Powerhshell example step
         shell: pwsh
         run: |
-          sh scripts/hello.ps1
+          pwsh ./scripts/hello.ps1
 
       - name: Python setup
         uses: actions/setup-python@v4
