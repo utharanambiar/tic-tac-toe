@@ -6,8 +6,6 @@ name: Node.js CI
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 env:
   NODE_VERSION: 20.x
@@ -31,4 +29,9 @@ jobs:
       run: |
         echo "Running custom shell script"
         ls -a
+
+    - name: Generate version
+      run: |
+        npm version patch -m "Bump version to %s [skip ci]"
+        git push origin main --follow-tags
  
