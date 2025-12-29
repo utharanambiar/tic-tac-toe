@@ -23,3 +23,11 @@ jobs:
 
       - name: Run tests
         run: echo "No tests yet"
+
+      - name: Powerhshell example step
+        shell: pwsh
+        run: |
+          Write-Host "This is a PowerShell step"
+          Get-ChildItem
+
+  
