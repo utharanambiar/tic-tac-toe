@@ -38,6 +38,6 @@ jobs:
         run: |
           python --version
           pip install requests
-          python scripts/validate_title.py
+          python scripts/validate_title.py "${{ github.event.pull_request.title }}"
 
   
