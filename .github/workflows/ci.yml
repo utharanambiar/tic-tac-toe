@@ -2,6 +2,7 @@ name: CI yaml
 
 on:
   pull_request:
+    types: [opened, edited, reopened, synchronize]
     branches:
       - main
 
