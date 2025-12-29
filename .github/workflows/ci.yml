@@ -34,10 +34,10 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Python script execution
+      - name: Validate title
         run: |
           python --version
           pip install requests
-          python scripts/hello.py
+          python scripts/validate_title.py
 
   
