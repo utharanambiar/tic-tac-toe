@@ -4,6 +4,7 @@ import sys
 title = sys.argv[1]
 
 pattern = r"AFW-\d+"
+print (f"Validating title: {title}")
 if re.search(pattern, title):
     print("Valid – Jira ticket found")
     sys.exit(0)
