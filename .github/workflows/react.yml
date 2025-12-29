@@ -36,6 +36,8 @@ jobs:
         git config --global user.name "GitHub Actions"
 
     - name: Generate version
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         npm version patch -m "Bump version to %s [skip ci]"
         git push origin main --follow-tags
